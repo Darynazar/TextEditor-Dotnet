@@ -8,6 +8,9 @@ namespace TextEditor.Models
     {
         public int Id { get; set; }
 
+        [Required]
+        public string Title { get; set; } // Add Title field
+
         public string Contect { get; set; }
 
         [Required]
