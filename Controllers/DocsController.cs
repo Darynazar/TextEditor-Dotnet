@@ -85,7 +85,6 @@ namespace TextEditor.Controllers
             {
                 return NotFound();
             }
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", doc.UserId);
             return View(doc);
         }
 
@@ -121,12 +120,6 @@ namespace TextEditor.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-
-            if (doc.UserId != User.FindFirstValue(ClaimTypes.NameIdentifier));
-            {
-                return NotFound();
-            }
-            //ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", doc.UserId);
             return View(doc);
         }
 
